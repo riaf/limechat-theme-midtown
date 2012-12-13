@@ -1,0 +1,173 @@
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+html {
+  font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+  font-size: 9pt;
+  background-color: white;
+  color: #333;
+  word-wrap: break-word;
+  margin: 0;
+  padding: 3px 4px 10px 4px;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+body.console .sender,
+body.console .message {
+  margin-left: 0;
+}
+hr {
+  margin: 0.5em 2em;
+}
+a {
+  color: #3b5998;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+/* lines */
+.line {
+  *zoom: 1;
+  margin: 2px 5px;
+  padding: 3px;
+}
+.line:before,
+.line:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.line:after {
+  clear: both;
+}
+.line:hover {
+  background-color: #eff2f7;
+}
+.line.action,
+.line.event,
+.line.mode {
+  background-color: #f7f7f7;
+  border: 1px solid #cccccc;
+}
+.line[type=action] .sender:before {
+  content: "• ";
+  white-space: nowrap;
+}
+.line[highlight=true] {
+  background-color: #fff9d7;
+  border: 1px solid #e2c822;
+}
+.url {
+  word-break: break-all;
+}
+.address {
+  text-decoration: underline;
+  word-break: break-all;
+}
+.highlight {
+  color: #dd3c10;
+  font-weight: bold;
+}
+.time {
+  display: block;
+  float: right;
+  color: #999;
+  font-size: 85%;
+}
+.place {
+  color: #008;
+}
+.avatar {
+  display: block;
+  float: left;
+  width: 25px;
+}
+/* nickname for text messages */
+.sender {
+  display: block;
+  margin: 0 50px 5px 35px;
+  color: #3b5998 !important;
+  font-weight: bold;
+}
+.sender[first=false] {
+  display: none;
+}
+/* message body */
+.message {
+  display: block;
+  margin: 0 50px 0 35px;
+}
+.message[type=system] {
+  color: #080;
+}
+.message[type=error] {
+  color: #f00;
+  font-weight: bold;
+}
+.message[type=reply] {
+  color: #088;
+}
+.message[type=error_reply] {
+  color: #f00;
+}
+.message[type=dcc_send_send] {
+  color: #088;
+}
+.message[type=dcc_send_receive] {
+  color: #00c;
+}
+.message[type=notice] {
+  color: #888;
+}
+.message[type=action] {
+  color: #080;
+}
+.message[type=join] {
+  color: #080;
+}
+.message[type=part] {
+  color: #080;
+}
+.message[type=kick] {
+  color: #080;
+}
+.message[type=quit] {
+  color: #080;
+}
+.message[type=kill] {
+  color: #080;
+}
+.message[type=nick] {
+  color: #080;
+}
+.message[type=mode] {
+  color: #080;
+}
+.message[type=topic] {
+  color: #080;
+}
+.message[type=invite] {
+  color: #080;
+}
+.message[type=wallops] {
+  color: #080;
+}
+.message[type=debug_send] {
+  color: #aaa;
+}
+.message[type=debug_receive] {
+  color: #444;
+}
+/* mIRC color effects */

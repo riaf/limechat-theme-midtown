@@ -1,0 +1,208 @@
+// lessc -
+// vim: ft=less
+
+.clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    // Fixes Opera/contenteditable bug:
+    // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+html {
+  font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+  font-size: 9pt;
+  background-color: white;
+  color: #333;
+  word-wrap: break-word;
+  margin: 0;
+  padding: 3px 4px 10px 4px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  &.console {
+    .sender,
+    .message {
+      margin-left: 0;
+    }
+  }
+
+  // &.normal {}
+  // &[type=channel]
+  // &[type=talk]
+  // &[channelname=#limechat]
+}
+
+hr {
+  margin: 0.5em 2em;
+}
+
+a {
+  color: #3b5998;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.inlineimage {}
+
+/* lines */
+.line {
+  .clearfix();
+  margin: 2px 5px;
+  padding: 3px;
+
+  &:hover {
+    background-color: #eff2f7;
+  }
+
+  &.action,
+  &.event,
+  &.mode {
+    background-color: #f7f7f7;
+    border: 1px solid #cccccc;
+  }
+
+  &[alternate=even] {}
+  &[alternate=odd] {}
+  &[type=action] .sender:before {
+    content: "• ";
+    white-space: nowrap;
+  }
+
+  &[highlight=true] {
+    background-color: #fff9d7;
+    border: 1px solid #e2c822;
+  }
+}
+
+.url {
+  word-break: break-all;
+}
+
+.address {
+  text-decoration: underline;
+  word-break: break-all;
+}
+
+.highlight {
+  color: #dd3c10;
+  font-weight: bold;
+}
+
+.time {
+  display: block;
+  float: right;
+  color: #999;
+  font-size: 85%;
+}
+.place { color: #008; }
+.avatar {
+  display: block;
+  float: left;
+  width: 25px;
+}
+
+/* nickname for text messages */
+.sender {
+  display: block;
+  margin: 0 50px 5px 35px;
+  color: #3b5998 !important;
+  font-weight: bold;
+
+  &[first=false] { display: none; }
+  // &[type=myself] {}
+  // &[type=normal] {}
+  // &[type=normal][colornumber='0'] {}
+  // &[type=normal][colornumber='1'] {}
+  // &[type=normal][colornumber='2'] {}
+  // &[type=normal][colornumber='3'] {}
+  // &[type=normal][colornumber='4'] {}
+  // &[type=normal][colornumber='5'] {}
+  // &[type=normal][colornumber='6'] {}
+  // &[type=normal][colornumber='7'] {}
+  // &[type=normal][colornumber='8'] {}
+  // &[type=normal][colornumber='9'] {}
+  // &[type=normal][colornumber='10'] {}
+  // &[type=normal][colornumber='11'] {}
+  // &[type=normal][colornumber='12'] {}
+  // &[type=normal][colornumber='13'] {}
+  // &[type=normal][colornumber='14'] {}
+  // &[type=normal][colornumber='15'] {}
+}
+
+/* message body */
+.message {
+  display: block;
+  margin: 0 50px 0 35px;
+
+  &[type=system] { color: #080; }
+  &[type=error] { color: #f00; font-weight: bold; }
+  &[type=reply] { color: #088; }
+  &[type=error_reply] { color: #f00; }
+  &[type=dcc_send_send] { color: #088; }
+  &[type=dcc_send_receive] { color: #00c; }
+  &[type=privmsg] {}
+  &[type=notice] { color: #888; }
+  &[type=action] { color: #080; }
+  &[type=join] { color: #080; }
+  &[type=part] { color: #080; }
+  &[type=kick] { color: #080; }
+  &[type=quit] { color: #080; }
+  &[type=kill] { color: #080; }
+  &[type=nick] { color: #080; }
+  &[type=mode] { color: #080; }
+  &[type=topic] { color: #080; }
+  &[type=invite] { color: #080; }
+  &[type=wallops] { color: #080; }
+  &[type=debug_send] { color: #aaa; }
+  &[type=debug_receive] { color: #444; }
+}
+
+/* mIRC color effects */
+.effect {
+  // &[color-number='0'] {}
+  // &[color-number='1'] {}
+  // &[color-number='2'] {}
+  // &[color-number='3'] {}
+  // &[color-number='4'] {}
+  // &[color-number='5'] {}
+  // &[color-number='6'] {}
+  // &[color-number='7'] {}
+  // &[color-number='8'] {}
+  // &[color-number='9'] {}
+  // &[color-number='10'] {}
+  // &[color-number='11'] {}
+  // &[color-number='12'] {}
+  // &[color-number='13'] {}
+  // &[color-number='14'] {}
+  // &[color-number='15'] {}
+  // &[bgcolor-number='0'] {}
+  // &[bgcolor-number='1'] {}
+  // &[bgcolor-number='2'] {}
+  // &[bgcolor-number='3'] {}
+  // &[bgcolor-number='4'] {}
+  // &[bgcolor-number='5'] {}
+  // &[bgcolor-number='6'] {}
+  // &[bgcolor-number='7'] {}
+  // &[bgcolor-number='8'] {}
+  // &[bgcolor-number='9'] {}
+  // &[bgcolor-number='10'] {}
+  // &[bgcolor-number='11'] {}
+  // &[bgcolor-number='12'] {}
+  // &[bgcolor-number='13'] {}
+  // &[bgcolor-number='14'] {}
+  // &[bgcolor-number='15'] {}
+}
