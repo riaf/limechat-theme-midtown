@@ -30,13 +30,6 @@ body {
   margin: 0;
   padding: 0;
 
-  &.console {
-    .sender,
-    .message {
-      margin-left: 0;
-    }
-  }
-
   // &.normal {}
   // &[type=channel]
   // &[type=talk]
@@ -58,7 +51,10 @@ a {
 
 .inlineimage {}
 
-/* lines */
+
+// lines
+// -----
+
 .line {
   .clearfix();
   margin: 2px 5px;
@@ -115,7 +111,10 @@ a {
   width: 25px;
 }
 
-/* nickname for text messages */
+
+// nickname for text messages
+// --------------------------
+
 .sender {
   display: block;
   margin: 0 50px 5px 35px;
@@ -143,7 +142,10 @@ a {
   // &[type=normal][colornumber='15'] {}
 }
 
-/* message body */
+
+// message body
+// ------------
+
 .message {
   display: block;
   margin: 0 50px 0 35px;
@@ -171,7 +173,10 @@ a {
   &[type=debug_receive] { color: #444; }
 }
 
-/* mIRC color effects */
+
+// mIRC color effects
+// ------------------
+
 .effect {
   // &[color-number='0'] {}
   // &[color-number='1'] {}
@@ -206,3 +211,27 @@ a {
   // &[bgcolor-number='14'] {}
   // &[bgcolor-number='15'] {}
 }
+
+
+body.console {
+  .line {
+    height: 1.3em;
+    overflow: hidden;
+
+    &:hover {
+      height: inherit;
+      overflow: visible;
+    }
+  }
+  .sender,
+  .message {
+    margin: 0 .25em;
+    display: inline;
+    margin-left: 0;
+  }
+  .time {
+    display: inline;
+    float: none;
+  }
+}
+

@@ -23,10 +23,6 @@ body {
   margin: 0;
   padding: 0;
 }
-body.console .sender,
-body.console .message {
-  margin-left: 0;
-}
 hr {
   margin: 0.5em 2em;
 }
@@ -37,7 +33,6 @@ a {
 a:hover {
   text-decoration: underline;
 }
-/* lines */
 .line {
   *zoom: 1;
   margin: 2px 5px;
@@ -94,7 +89,6 @@ a:hover {
   float: left;
   width: 25px;
 }
-/* nickname for text messages */
 .sender {
   display: block;
   margin: 0 50px 5px 35px;
@@ -104,7 +98,6 @@ a:hover {
 .sender[first=false] {
   display: none;
 }
-/* message body */
 .message {
   display: block;
   margin: 0 50px 0 35px;
@@ -170,4 +163,21 @@ a:hover {
 .message[type=debug_receive] {
   color: #444;
 }
-/* mIRC color effects */
+body.console .line {
+  height: 1.3em;
+  overflow: hidden;
+}
+body.console .line:hover {
+  height: inherit;
+  overflow: visible;
+}
+body.console .sender,
+body.console .message {
+  margin: 0 .25em;
+  display: inline;
+  margin-left: 0;
+}
+body.console .time {
+  display: inline;
+  float: none;
+}
