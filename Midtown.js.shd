@@ -1,0 +1,50 @@
+## coffee -cs
+## vim: ft=coffee
+
+avatars = {}
+
+document.addEventListener "DOMNodeInserted", (e) ->
+  line = e.target
+
+  type = line.getAttribute "type"
+  nick = line.getAttribute "nick"
+
+  if type not in ["privmsg", "notice"]
+    return
+
+  sender = line.querySelector ".sender"
+  first = false
+
+  if sender
+    first = (sender.getAttribute "first") is "true"
+
+  nick = nick.replace /_+$/, ""
+
+  if nick of avatars
+    nick = avatars[nick]
+
+
+  if nick
+    avatar = "http://res.cloudinary.com/riaf/image/facebook/w_25,h_25,c_fill/#{ nick }.png"
+  else
+    avatar = "http://res.cloudinary.com/riaf/image/upload/v1360133596/noimage.png"
+
+  img_container = document.createElement "span"
+  img_container.setAttribute "class", "midtown-avatar"
+  img_container.setAttribute "first", if first then "true" else "false"
+  img = document.createElement "img"
+  img.src = avatar
+
+  img_container.appendChild img
+  line.insertBefore img_container, line.firstChild
+
+
+# avatars
+xhr = new XMLHttpRequest
+xhr.open "GET", "https://raw.github.com/riaf/limechat-theme-midtown/master/avatars.json"
+xhr.onreadystatechange = ->
+  if xhr.readyState is 4 and xhr.status is 200
+    avatars = JSON.parse xhr.responseText
+
+xhr.send()
+

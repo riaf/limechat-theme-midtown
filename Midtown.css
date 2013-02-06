@@ -85,9 +85,7 @@ a:hover {
   color: #008;
 }
 .avatar {
-  display: block;
-  float: left;
-  width: 25px;
+  display: none;
 }
 .sender {
   display: block;
@@ -163,21 +161,32 @@ a:hover {
 .message[type=debug_receive] {
   color: #444;
 }
+.midtown-avatar {
+  float: left;
+}
+.midtown-avatar img {
+  width: 25px;
+  height: 25px;
+}
+.midtown-avatar[first=false] {
+  display: none;
+}
 body.console .line {
-  height: 1.3em;
-  overflow: hidden;
+  float: left;
+  clear: none;
+  margin: 0 2px 2px 0;
+  width: 30px;
+  height: 30px;
 }
-body.console .line:hover {
-  height: inherit;
-  overflow: visible;
+body.console .line > * {
+  display: none;
 }
-body.console .sender,
-body.console .message {
-  margin: 0 .25em;
-  display: inline;
-  margin-left: 0;
-}
-body.console .time {
-  display: inline;
+body.console .line .midtown-avatar {
   float: none;
+  display: inline;
+}
+body.console .line.action,
+body.console .line.event,
+body.console .line.mode {
+  display: none;
 }
