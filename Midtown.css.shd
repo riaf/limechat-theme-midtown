@@ -223,24 +223,25 @@ a {
 
 body.console {
   .line {
-    float: left;
-    clear: none;
-    margin: 0 2px 2px 0;
-    width: 30px;
-    height: 30px;
+    font-size: 85%;
 
-    & > * {
-      display: none;
-    }
-
-    .midtown-avatar {
-      float: none;
+    .time {
       display: inline;
+      float: none;
+      color: #999;
+      font-size: inherit;
     }
-
-    &.action,
-    &.event,
-    &.mode {
+    .sender {
+      display: inline;
+      margin: inherit;
+      color: #3b5998 !important;
+      font-weight: bold;
+    }
+    .message {
+      display: inline;
+      margin: inherit;
+    }
+    .midtown-avatar {
       display: none;
     }
   }

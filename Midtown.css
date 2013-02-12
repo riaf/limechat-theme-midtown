@@ -172,21 +172,24 @@ a:hover {
   display: none;
 }
 body.console .line {
-  float: left;
-  clear: none;
-  margin: 0 2px 2px 0;
-  width: 30px;
-  height: 30px;
+  font-size: 85%;
 }
-body.console .line > * {
-  display: none;
+body.console .line .time {
+  display: inline;
+  float: none;
+  color: #999;
+  font-size: inherit;
+}
+body.console .line .sender {
+  display: inline;
+  margin: inherit;
+  color: #3b5998 !important;
+  font-weight: bold;
+}
+body.console .line .message {
+  display: inline;
+  margin: inherit;
 }
 body.console .line .midtown-avatar {
-  float: none;
-  display: inline;
-}
-body.console .line.action,
-body.console .line.event,
-body.console .line.mode {
   display: none;
 }
