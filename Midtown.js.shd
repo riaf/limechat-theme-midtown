@@ -21,10 +21,10 @@ document.addEventListener "DOMNodeInserted", (e) ->
   nick = nick.replace /_+$/, ""
 
   if nick of avatars
-    nick = avatars[nick]
-
-
-  if nick
+    avatar = avatars[nick]
+  else if nick == "***"
+    avatar = "http://res.cloudinary.com/riaf/image/upload/v1360133596/noimage.png"
+  else if nick
     avatar = "http://res.cloudinary.com/riaf/image/facebook/w_25,h_25,c_fill/#{ nick }.png"
   else
     avatar = "http://res.cloudinary.com/riaf/image/upload/v1360133596/noimage.png"
@@ -41,10 +41,16 @@ document.addEventListener "DOMNodeInserted", (e) ->
 
 # avatars
 xhr = new XMLHttpRequest
-xhr.open "GET", "https://raw.github.com/riaf/limechat-theme-midtown/master/avatars.json"
+xhr.open "GET", "http://wedata.net/databases/limechat-theme-midtown-avatars/items.json"
 xhr.onreadystatechange = ->
   if xhr.readyState is 4 and xhr.status is 200
-    avatars = JSON.parse xhr.responseText
+    data = JSON.parse xhr.responseText
+
+    for item in data
+      if item.data?.nick?
+        avatars[item.data.nick] = item.data.image
+
+  true
 
 xhr.send()
 
