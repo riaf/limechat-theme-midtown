@@ -23,7 +23,7 @@
     } else if (nick === "***") {
       avatar = "http://res.cloudinary.com/riaf/image/upload/v1360133596/noimage.png";
     } else if (nick) {
-      avatar = "http://res.cloudinary.com/riaf/image/facebook/w_25,h_25,c_fill/" + nick + ".png";
+      avatar = "http://res.cloudinary.com/riaf/image/facebook/w_25,h_25,c_thumb,g_face/" + nick + ".png";
     } else {
       avatar = "http://res.cloudinary.com/riaf/image/upload/v1360133596/noimage.png";
     }
