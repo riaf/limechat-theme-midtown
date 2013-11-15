@@ -7,7 +7,7 @@
   document.addEventListener("DOMNodeInserted", function(e) {
     var avatar, first, img, img_container, line, nick, sender, type;
     line = e.target;
-    type = line.getAttribute("type");
+    type = line.getAttribute("_type");
     nick = line.getAttribute("nick");
     if (type !== "privmsg" && type !== "notice") {
       return;
@@ -17,13 +17,13 @@
     if (sender) {
       first = (sender.getAttribute("first")) === "true";
     }
-    nick = nick.replace(/_+$/, "");
+    nick = nick.replace(/[0-9_]+$/, "");
     if (nick in avatars) {
       avatar = avatars[nick];
     } else if (nick === "***") {
       avatar = "http://res.cloudinary.com/riaf/image/upload/v1360133596/noimage.png";
     } else if (nick) {
-      avatar = "http://res.cloudinary.com/riaf/image/facebook/w_25,h_25,c_thumb,g_face/" + nick + ".png";
+      avatar = "http://res.cloudinary.com/riaf/image/facebook/w_25,h_25,c_thumb,g_face,d_contacts_kxvdl7.png/" + nick + ".png";
     } else {
       avatar = "http://res.cloudinary.com/riaf/image/upload/v1360133596/noimage.png";
     }
@@ -38,7 +38,7 @@
 
   xhr = new XMLHttpRequest;
 
-  xhr.open("GET", "http://wedata.net/databases/limechat-theme-midtown-avatars/items.json");
+  xhr.open("GET", "https://raw.github.com/riaf/limechat-theme-midtown/master/avatars.json");
 
   xhr.onreadystatechange = function() {
     var data, item, _i, _len, _ref;

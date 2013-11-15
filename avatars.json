@@ -1,22 +1,149 @@
-{
-  "riaf"       : "sato.keisuke",
-  "fivestr"    : "katsuhiro.ogawa",
-  "cocoitiban" : "cocoiti",
-  "tofujiit"   : "toshiyuki.fujita.9887",
-  "tetaketa"   : "tetsuya.taketani",
-  "okapon_pon" : "yuuichi.okada",
-  "suzuki"     : "norio.suzuki",
-  "junichiro"  : "junichiro.tobe",
-  "maru_cc"    : "tomoyuki.maruta",
-  "m-takagi"   : "takagimasahiro",
-  "kupi-mb"    : "kuppiTM",
-  "kupikupi"   : "kuppiTM",
-  "saito"      : "ksaito",
-  "saito0"     : "ksaito",
-  "koiwaSPR"   : "koiwa.hidekazu",
-  "koiwaKTM"   : "koiwa.hidekazu",
-  "ikeda"      : "terukazu.ikeda.7",
-  "crocosbot"  : "Crocos.Inc",
-  "jenkinsbot" : "312954275925",
-  "***"        : ""
-}
+[
+    {
+        "name": "riaf",
+        "data": {
+            "nick": "riaf",
+            "image": "http://res.cloudinary.com/riaf/image/facebook/w_25,h_25,c_thumb,g_face,d_contacts_kxvdl7.png/sato.keisuke.png"
+        }
+    },
+    {
+        "name": "fivestr",
+        "data": {
+            "nick": "fivestr",
+            "image": "http://res.cloudinary.com/riaf/image/facebook/w_25,h_25,c_thumb,g_face,d_contacts_kxvdl7.png/katsuhiro.ogawa.png"
+        }
+    },
+    {
+        "name": "fivestar",
+        "data": {
+            "nick": "fivestar",
+            "image": "http://res.cloudinary.com/riaf/image/facebook/w_25,h_25,c_thumb,g_face,d_contacts_kxvdl7.png/katsuhiro.ogawa.png"
+        }
+    },
+    {
+        "name": "cocoitiban",
+        "data": {
+            "nick": "cocoitiban",
+            "image": "http://res.cloudinary.com/riaf/image/facebook/w_25,h_25,c_thumb,g_face,d_contacts_kxvdl7.png/cocoiti.png"
+        }
+    },
+    {
+        "name": "tofujiit",
+        "data": {
+            "nick": "tofujiit",
+            "image": "http://res.cloudinary.com/riaf/image/facebook/w_25,h_25,c_thumb,g_face,d_contacts_kxvdl7.png/toshiyuki.fujita.9887.png"
+        }
+    },
+    {
+        "name": "tetaketa",
+        "data": {
+            "nick": "tetaketa",
+            "image": "http://res.cloudinary.com/riaf/image/facebook/w_25,h_25,c_thumb,g_face,d_contacts_kxvdl7.png/tetsuya.taketani.png"
+        }
+    },
+    {
+        "name": "okapon_pon",
+        "data": {
+            "nick": "okapon_pon",
+            "image": "http://res.cloudinary.com/riaf/image/facebook/w_25,h_25,c_thumb,g_face,d_contacts_kxvdl7.png/yuuichi.okada.png"
+        }
+    },
+    {
+        "name": "suzuki",
+        "data": {
+            "nick": "suzuki",
+            "image": "http://res.cloudinary.com/riaf/image/facebook/w_25,h_25,c_thumb,g_face,d_contacts_kxvdl7.png/norio.suzuki.png"
+        }
+    },
+    {
+        "name": "yhino",
+        "data": {
+            "nick": "yhino",
+            "image": "http://res.cloudinary.com/riaf/image/facebook/w_25,h_25,c_thumb,g_face,d_contacts_kxvdl7.png/gyhino.png"
+        }
+    },
+    {
+        "name": "fujimaki",
+        "data": {
+            "nick": "fujimaki",
+            "image": "http://res.cloudinary.com/riaf/image/facebook/w_25,h_25,c_thumb,g_face,d_contacts_kxvdl7.png/sotaro.fujimaki.png"
+        }
+    },
+    {
+        "name": "junichiro",
+        "data": {
+            "nick": "junichiro",
+            "image": "http://res.cloudinary.com/riaf/image/facebook/w_25,h_25,c_thumb,g_face,d_contacts_kxvdl7.png/junichiro.tobe.png"
+        }
+    },
+    {
+        "name": "maru_cc",
+        "data": {
+            "nick": "maru_cc",
+            "image": "http://res.cloudinary.com/riaf/image/facebook/w_25,h_25,c_thumb,g_face,d_contacts_kxvdl7.png/tomoyuki.maruta.png"
+        }
+    },
+    {
+        "name": "m-takagi",
+        "data": {
+            "nick": "m-takagi",
+            "image": "http://res.cloudinary.com/riaf/image/facebook/w_25,h_25,c_thumb,g_face,d_contacts_kxvdl7.png/takagimasahiro.png"
+        }
+    },
+    {
+        "name": "kupi-mb",
+        "data": {
+            "nick": "kupi-mb",
+            "image": "http://res.cloudinary.com/riaf/image/facebook/w_25,h_25,c_thumb,g_face,d_contacts_kxvdl7.png/kuppiTM.png"
+        }
+    },
+    {
+        "name": "kupikupi",
+        "data": {
+            "nick": "kupikupi",
+            "image": "http://res.cloudinary.com/riaf/image/facebook/w_25,h_25,c_thumb,g_face,d_contacts_kxvdl7.png/kuppiTM.png"
+        }
+    },
+    {
+        "name": "saito",
+        "data": {
+            "nick": "saito",
+            "image": "http://res.cloudinary.com/riaf/image/facebook/w_25,h_25,c_thumb,g_face,d_contacts_kxvdl7.png/ksaito.png"
+        }
+    },
+    {
+        "name": "koiwaSPR",
+        "data": {
+            "nick": "koiwaSPR",
+            "image": "http://res.cloudinary.com/riaf/image/facebook/w_25,h_25,c_thumb,g_face,d_contacts_kxvdl7.png/koiwa.hidekazu.png"
+        }
+    },
+    {
+        "name": "koiwaKTM",
+        "data": {
+            "nick": "koiwaKTM",
+            "image": "http://res.cloudinary.com/riaf/image/facebook/w_25,h_25,c_thumb,g_face,d_contacts_kxvdl7.png/koiwa.hidekazu.png"
+        }
+    },
+    {
+        "name": "ikeda",
+        "data": {
+            "nick": "ikeda",
+            "image": "http://res.cloudinary.com/riaf/image/facebook/w_25,h_25,c_thumb,g_face,d_contacts_kxvdl7.png/terukazu.ikeda.7.png"
+        }
+    },
+    {
+        "name": "crocosbot",
+        "data": {
+            "nick": "crocosbot",
+            "image": "http://res.cloudinary.com/riaf/image/facebook/w_25,h_25,c_thumb,g_face,d_contacts_kxvdl7.png/Crocos.Inc.png"
+        }
+    },
+    {
+        "name": "jenkinsbot",
+        "data": {
+            "nick": "jenkinsbot",
+            "image": "http://res.cloudinary.com/riaf/image/facebook/w_25,h_25,c_thumb,g_face,d_contacts_kxvdl7.png/312954275925.png"
+        }
+    }
+]

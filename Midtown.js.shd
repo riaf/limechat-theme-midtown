@@ -6,7 +6,7 @@ avatars = {}
 document.addEventListener "DOMNodeInserted", (e) ->
   line = e.target
 
-  type = line.getAttribute "type"
+  type = line.getAttribute "_type"
   nick = line.getAttribute "nick"
 
   if type not in ["privmsg", "notice"]
@@ -18,14 +18,14 @@ document.addEventListener "DOMNodeInserted", (e) ->
   if sender
     first = (sender.getAttribute "first") is "true"
 
-  nick = nick.replace /_+$/, ""
+  nick = nick.replace /[0-9_]+$/, ""
 
   if nick of avatars
     avatar = avatars[nick]
   else if nick == "***"
     avatar = "http://res.cloudinary.com/riaf/image/upload/v1360133596/noimage.png"
   else if nick
-    avatar = "http://res.cloudinary.com/riaf/image/facebook/w_25,h_25,c_thumb,g_face/#{ nick }.png"
+    avatar = "http://res.cloudinary.com/riaf/image/facebook/w_25,h_25,c_thumb,g_face,d_contacts_kxvdl7.png/#{ nick }.png"
   else
     avatar = "http://res.cloudinary.com/riaf/image/upload/v1360133596/noimage.png"
 
@@ -41,7 +41,7 @@ document.addEventListener "DOMNodeInserted", (e) ->
 
 # avatars
 xhr = new XMLHttpRequest
-xhr.open "GET", "http://wedata.net/databases/limechat-theme-midtown-avatars/items.json"
+xhr.open "GET", "https://raw.github.com/riaf/limechat-theme-midtown/master/avatars.json"
 xhr.onreadystatechange = ->
   if xhr.readyState is 4 and xhr.status is 200
     data = JSON.parse xhr.responseText

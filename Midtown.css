@@ -165,8 +165,10 @@ a:hover {
   float: left;
 }
 .midtown-avatar img {
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 30px;
 }
 .midtown-avatar[first=false] {
   display: none;
