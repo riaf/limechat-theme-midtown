@@ -1,10 +1,12 @@
 // lessc -
 // vim: ft=less
 
-@base-color: #fff;
+@background-color-light: #fff;
+@background-color-dark: #31353e;
 
 @font-size: 10pt;
-@text-color: darken(@base-color, 80%);
+@text-color-light: darken(@background-color-light, 80%);
+@text-color-dark: lighten(@background-color-dark, 80%);
 @line-height: 1.5;
 
 @line-margin-tb: 5px;
@@ -12,7 +14,7 @@
 @line-padding-tb: 3px;
 @line-padding-lr: 8px;
 
-@hover-border-color: darken(@base-color, 20%);
+@hover-border-color: darken(@background-color-light, 20%);
 @mode-border-color: @hover-border-color;
 
 .clearfix {
@@ -33,17 +35,17 @@
 html {
   font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
   font-size: @font-size;
-  background-color: white;
-  color: @text-color;
+  background-color: @background-color-light;
+  color: @text-color-light;
   word-wrap: break-word;
   margin: 0;
-  padding: 3px 0 10px;
+  padding: 0;
   line-height: @line-height;
 }
 
 body {
   margin: 0;
-  padding: 0;
+  padding: 3px 0 10px;
 
   // &.normal {}
   // &[type=channel]
@@ -248,8 +250,24 @@ a {
 
 
 body.console {
+  padding: 0;
+  background-color: @background-color-dark;
+  color: @text-color-dark;
+
   .line {
+    margin-bottom: 0;
     font-size: 85%;
+    overflow: hidden;
+
+    &.action,
+    &.event,
+    &.mode {
+      background-color: darken(@background-color-dark, 10%);
+    }
+
+    &[highlight=true] {
+      background-color: lighten(@background-color-dark, 10%);
+    }
 
     .time {
       display: inline;
@@ -260,7 +278,7 @@ body.console {
     .sender {
       display: inline;
       margin: inherit;
-      color: #3b5998 !important;
+      color: darken(@text-color-dark, 20%) !important;
       font-weight: bold;
     }
     .message {
@@ -272,4 +290,3 @@ body.console {
     }
   }
 }
-

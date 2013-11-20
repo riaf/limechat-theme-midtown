@@ -5,50 +5,50 @@ log-view:
   nickname-format: '%n'
   scroller-highlight-color: '#dd3c10'
 input-text:
-  font-family: 'Lucida Grande'
-  font-size: 13.0
-  background-color: '#fff'
-  color: '#333'
+  font-family: 'Helvetica Neue'
+  font-size: 14.0
+  background-color: '#181a1f'
+  color: '#c2c4cc'
   selected:
-    background-color: '#ccc'
+    background-color: '#333'
 member-list:
-  font-family: 'Lucida Grande'
+  font-family: 'Helvetica Neue'
   font-size: 13.0
-  color: '#333'
-  background-color: '#f2f4f8'
+  color: '#c2c4cc'
+  background-color: '#31353e'
   operator:
-    color: '#333'
+    color: '#c2c4cc'
   selected:
-    color: '#333'
+    color: '#c2c4cc'
     background:
       # gradient
-      top-line-color: '#e0e4ee'
-      bottom-line-color: '#e0e4ee'
-      top-color: '#e0e4ee'
-      bottom-color: '#e0e4ee'
+      top-line-color: '#1f2228'
+      bottom-line-color: '#1f2228'
+      top-color: '#1f2228'
+      bottom-color: '#1f2228'
 server-tree:
-  font-family: 'Lucida Grande'
+  font-family: 'Helvetica Neue'
   font-size: 13.0
-  background-color: '#f2f4f8'
+  background-color: '#31353e'
   highlight:
-    color: '#dd3c10'
+    color: '#dbdbdb'
   newtalk:
-    color: '#dd3c10'
+    color: '#dbdbdb'
   unread:
-    color: '#3b5998'
+    color: '#cfcfcf'
   normal:
     active:
-      color: '#333'
+      color: '#c2c4cc'
     inactive:
-      color: '#999'
+      color: '#8c949f'
   selected:
     active:
-      color: '#333'
+      color: '#c2c4cc'
     inactive:
-      color: '#999'
+      color: '#8c949f'
     background:
       # gradient
-      top-line-color: '#e0e4ee'
-      bottom-line-color: '#e0e4ee'
-      top-color: '#e0e4ee'
-      bottom-color: '#e0e4ee'
+      top-line-color: '#1f2228'
+      bottom-line-color: '#1f2228'
+      top-color: '#1f2228'
+      bottom-color: '#1f2228'
