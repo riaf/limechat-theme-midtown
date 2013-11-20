@@ -1,6 +1,20 @@
 // lessc -
 // vim: ft=less
 
+@base-color: #fff;
+
+@font-size: 10pt;
+@text-color: darken(@base-color, 80%);
+@line-height: 1.5;
+
+@line-margin-tb: 5px;
+@line-margin-lr: 0;
+@line-padding-tb: 3px;
+@line-padding-lr: 8px;
+
+@hover-border-color: darken(@base-color, 20%);
+@mode-border-color: @hover-border-color;
+
 .clearfix {
   *zoom: 1;
   &:before,
@@ -18,12 +32,13 @@
 
 html {
   font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
-  font-size: 9pt;
+  font-size: @font-size;
   background-color: white;
-  color: #333;
+  color: @text-color;
   word-wrap: break-word;
   margin: 0;
-  padding: 3px 4px 10px 4px;
+  padding: 3px 0 10px;
+  line-height: @line-height;
 }
 
 body {
@@ -57,18 +72,21 @@ a {
 
 .line {
   .clearfix();
-  margin: 2px 5px;
-  padding: 3px;
+  margin: @line-margin-tb @line-margin-lr;
+  padding: @line-padding-tb @line-padding-lr;
 
   &:hover {
-    background-color: #eff2f7;
+    border-left: 3px solid @hover-border-color;
+    padding-left: 5px;
   }
 
   &.action,
   &.event,
   &.mode {
+    margin: 0;
     background-color: #f7f7f7;
-    border: 1px solid #cccccc;
+    border-left: 3px solid @mode-border-color;
+    padding-left: 5px;
   }
 
   &[alternate=even] {}
@@ -80,7 +98,13 @@ a {
 
   &[highlight=true] {
     background-color: #fff9d7;
-    border: 1px solid #e2c822;
+    border-top: 1px solid #e2c822;
+    border-bottom: 1px solid #e2c822;
+  }
+
+  &[first=false] {
+    margin: 0 @line-margin-lr;
+    padding: 0 @line-padding-lr;
   }
 }
 
@@ -115,7 +139,7 @@ a {
 
 .sender {
   display: block;
-  margin: 0 50px 5px 35px;
+  margin: 0 50px 5px 40px;
   color: #3b5998 !important;
   font-weight: bold;
 
@@ -146,7 +170,7 @@ a {
 
 .message {
   display: block;
-  margin: 0 50px 0 35px;
+  margin: 0 50px 0 40px;
 
   &[type=system] { color: #080; }
   &[type=error] { color: #f00; font-weight: bold; }

@@ -2,10 +2,16 @@
 (function() {
   var avatars, xhr;
 
+  if (!String.prototype.trim) {
+    String.prototype.trim = function() {
+      return this.replace(/^\s+|\s+$/g, "");
+    };
+  }
+
   avatars = {};
 
   document.addEventListener("DOMNodeInserted", function(e) {
-    var avatar, first, img, img_container, line, nick, sender, type;
+    var avatar, date, first, img, img_container, line, message, nick, sender, text, time, type;
     line = e.target;
     type = line.getAttribute("_type");
     nick = line.getAttribute("nick");
@@ -33,7 +39,15 @@
     img = document.createElement("img");
     img.src = avatar;
     img_container.appendChild(img);
-    return line.insertBefore(img_container, line.firstChild);
+    line.insertBefore(img_container, line.firstChild);
+    message = line.querySelector(".message");
+    text = message.textContent.trim();
+    date = text.replace(/^\[([0-9\/: ]+?)\] .+$/, "$1");
+    if (date.match(/^[0-9\/: ]+$/)) {
+      time = line.querySelector(".time");
+      time.textContent = date;
+      return message.innerHTML = message.innerHTML.replace("[" + date + "]", "");
+    }
   });
 
   xhr = new XMLHttpRequest;

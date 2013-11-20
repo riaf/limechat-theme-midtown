@@ -12,12 +12,13 @@
 }
 html {
   font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
-  font-size: 9pt;
+  font-size: 10pt;
   background-color: white;
-  color: #333;
+  color: #333333;
   word-wrap: break-word;
   margin: 0;
-  padding: 3px 4px 10px 4px;
+  padding: 3px 0 10px;
+  line-height: 1.5;
 }
 body {
   margin: 0;
@@ -35,8 +36,8 @@ a:hover {
 }
 .line {
   *zoom: 1;
-  margin: 2px 5px;
-  padding: 3px;
+  margin: 5px 0;
+  padding: 3px 8px;
 }
 .line:before,
 .line:after {
@@ -48,13 +49,16 @@ a:hover {
   clear: both;
 }
 .line:hover {
-  background-color: #eff2f7;
+  border-left: 3px solid #cccccc;
+  padding-left: 5px;
 }
 .line.action,
 .line.event,
 .line.mode {
+  margin: 0;
   background-color: #f7f7f7;
-  border: 1px solid #cccccc;
+  border-left: 3px solid #cccccc;
+  padding-left: 5px;
 }
 .line[type=action] .sender:before {
   content: "• ";
@@ -62,7 +66,12 @@ a:hover {
 }
 .line[highlight=true] {
   background-color: #fff9d7;
-  border: 1px solid #e2c822;
+  border-top: 1px solid #e2c822;
+  border-bottom: 1px solid #e2c822;
+}
+.line[first=false] {
+  margin: 0 0;
+  padding: 0 8px;
 }
 .url {
   word-break: break-all;
@@ -89,7 +98,7 @@ a:hover {
 }
 .sender {
   display: block;
-  margin: 0 50px 5px 35px;
+  margin: 0 50px 5px 40px;
   color: #3b5998 !important;
   font-weight: bold;
 }
@@ -98,7 +107,7 @@ a:hover {
 }
 .message {
   display: block;
-  margin: 0 50px 0 35px;
+  margin: 0 50px 0 40px;
 }
 .message[type=system] {
   color: #080;
