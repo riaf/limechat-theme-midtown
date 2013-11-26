@@ -72,14 +72,26 @@ a {
 // lines
 // -----
 
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+    overflow: hidden;
+  }
+  100% {
+    opacity: 1;
+    overflow: auto;
+  }
+}
+
 .line {
   .clearfix();
   margin: @line-margin-tb @line-margin-lr;
   padding: @line-padding-tb @line-padding-lr;
+  -webkit-animation: fadein .2s ease-in-out;
 
   &:hover {
-    border-left: 3px solid @hover-border-color;
-    padding-left: 5px;
+    border-left: 5px solid @hover-border-color;
+    padding-left: 3px;
   }
 
   &.action,
@@ -87,8 +99,8 @@ a {
   &.mode {
     margin: 0;
     background-color: #f7f7f7;
-    border-left: 3px solid @mode-border-color;
-    padding-left: 5px;
+    border-left: 5px solid @mode-border-color;
+    padding-left: 3px;
   }
 
   &[alternate=even] {}
@@ -100,8 +112,8 @@ a {
 
   &[highlight=true] {
     background-color: #fff9d7;
-    border-top: 1px solid #e2c822;
-    border-bottom: 1px solid #e2c822;
+    border-left: 5px solid #e2c822;
+    padding-left: 3px;
   }
 
   &[first=false] {
@@ -255,7 +267,7 @@ body.console {
   color: @text-color-dark;
 
   .line {
-    margin-bottom: 0;
+    margin: 0;
     font-size: 85%;
     overflow: hidden;
 
@@ -272,12 +284,19 @@ body.console {
     .time {
       display: inline;
       float: none;
-      color: #999;
+      color: darken(@text-color-dark, 20%) !important;
       font-size: inherit;
+      margin-left: 2px;
+      margin-right: 2px;
+    }
+    .place {
+      color: darken(@text-color-dark, 30%) !important;
     }
     .sender {
       display: inline;
       margin: inherit;
+      margin-left: 2px;
+      margin-right: 8px;
       color: darken(@text-color-dark, 20%) !important;
       font-weight: bold;
     }

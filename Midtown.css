@@ -34,10 +34,21 @@ a {
 a:hover {
   text-decoration: underline;
 }
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+    overflow: hidden;
+  }
+  100% {
+    opacity: 1;
+    overflow: auto;
+  }
+}
 .line {
   *zoom: 1;
   margin: 5px 0;
   padding: 3px 8px;
+  -webkit-animation: fadein 0.2s ease-in-out;
 }
 .line:before,
 .line:after {
@@ -49,16 +60,16 @@ a:hover {
   clear: both;
 }
 .line:hover {
-  border-left: 3px solid #cccccc;
-  padding-left: 5px;
+  border-left: 5px solid #cccccc;
+  padding-left: 3px;
 }
 .line.action,
 .line.event,
 .line.mode {
   margin: 0;
   background-color: #f7f7f7;
-  border-left: 3px solid #cccccc;
-  padding-left: 5px;
+  border-left: 5px solid #cccccc;
+  padding-left: 3px;
 }
 .line[type=action] .sender:before {
   content: "• ";
@@ -66,8 +77,8 @@ a:hover {
 }
 .line[highlight=true] {
   background-color: #fff9d7;
-  border-top: 1px solid #e2c822;
-  border-bottom: 1px solid #e2c822;
+  border-left: 5px solid #e2c822;
+  padding-left: 3px;
 }
 .line[first=false] {
   margin: 0 0;
@@ -188,7 +199,7 @@ body.console {
   color: #ffffff;
 }
 body.console .line {
-  margin-bottom: 0;
+  margin: 0;
   font-size: 85%;
   overflow: hidden;
 }
@@ -203,12 +214,19 @@ body.console .line[highlight=true] {
 body.console .line .time {
   display: inline;
   float: none;
-  color: #999;
+  color: #cccccc !important;
   font-size: inherit;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+body.console .line .place {
+  color: #b3b3b3 !important;
 }
 body.console .line .sender {
   display: inline;
   margin: inherit;
+  margin-left: 2px;
+  margin-right: 8px;
   color: #cccccc !important;
   font-weight: bold;
 }
